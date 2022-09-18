@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "omni-method": "apps/omni-method",
-    "omni-method-e2e": "apps/omni-method-e2e"
+    "omni-method-e2e": "apps/omni-method-e2e",
+    "ui": "libs/ui"
   }
 }
