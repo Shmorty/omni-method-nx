@@ -1,0 +1,28 @@
+{
+  "root": "apps/omni-method-e2e",
+  "sourceRoot": "apps/omni-method-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/omni-method-e2e/cypress.json",
+        "devServerTarget": "omni-method:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "omni-method:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/omni-method-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["omni-method"]
+}

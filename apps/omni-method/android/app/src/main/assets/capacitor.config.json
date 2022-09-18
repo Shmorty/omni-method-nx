@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "omni-method",
+	"webDir": "../../dist/apps/omni-method",
+	"bundledWebRuntime": false
+}

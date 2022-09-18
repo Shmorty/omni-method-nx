@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "omni-method": "apps/omni-method",
+    "omni-method-e2e": "apps/omni-method-e2e"
+  }
 }
