@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
   },
+  {
+    path: 'lib',
+    loadChildren: () =>
+    import('@omni-method-nx/ui').then((m) => m.TabsComponent),
+  }
 ];
 @NgModule({
   imports: [
