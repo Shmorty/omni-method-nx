@@ -1,16 +1,29 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginComponent, TabsComponent, WelcomeComponent } from '@omni-method-nx/ui';
 
 const routes: Routes = [
+  // {
+  //   path: 'ui',
+  //   loadChildren: () =>
+  //   import('@omni-method-nx/ui').then((m) => m.UiModule),
+  // },
   {
-    path: '',
-    loadChildren: () =>
-      import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+    path: 'welcome',
+    component: WelcomeComponent,
   },
   {
-    path: 'lib',
-    loadChildren: () =>
-    import('@omni-method-nx/ui').then((m) => m.TabsComponent),
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'tabs',
+    component: TabsComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/welcome',
+    pathMatch: 'full',
   }
 ];
 @NgModule({
